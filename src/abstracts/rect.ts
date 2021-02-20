@@ -2,6 +2,10 @@ import {IPoint, IRect} from "../../interface";
 
 export default abstract class Rect implements IRect {
     private _position: IPoint;
+    private _width: number;
+    private _height: number;
+    private _horizontalEdge: "left" | "right";
+    private _verticalEdge: "top" | "bottom";
 
     get position(): IPoint {
         return this._position;
@@ -11,8 +15,6 @@ export default abstract class Rect implements IRect {
         this._position = value;
     }
 
-    private _width: number;
-
     get width(): number {
         return this._width;
     }
@@ -20,8 +22,6 @@ export default abstract class Rect implements IRect {
     set width(value: number) {
         this._width = value;
     }
-
-    private _height: number;
 
     get height(): number {
         return this._height;
@@ -31,13 +31,9 @@ export default abstract class Rect implements IRect {
         this._height = value;
     }
 
-    private _horizontalEdge: "left" | "right";
-
     get horizontalEdge(): "left" | "right" {
         return this._horizontalEdge;
     }
-
-    private _verticalEdge: "top" | "bottom";
 
     get verticalEdge(): "top" | "bottom" {
         return this._verticalEdge;

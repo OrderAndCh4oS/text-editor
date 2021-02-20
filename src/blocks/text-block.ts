@@ -2,25 +2,24 @@ import {ICharacterStyle, IGlyph, IParagraphStyle, ITextBlock} from "../../interf
 import Rect from "../abstracts/rect";
 
 export default class TextBlock extends Rect implements ITextBlock {
+    private _glyphs: IGlyph[] = []
+    private _uuid: string;
+
     constructor() {
         super();
     }
 
-    private _glyphs: IGlyph[] = []
+    get uuid(): string {
+        return this._uuid;
+    }
 
     /**
      * Glyphs could be linked list
-     * or at least each glyph needs to knows it's paragraph style
+     * or at least each glyph needs to knows it's paragraph weight
      * With a linked list the cursor could even be a node that runs up and down the list.
      */
     get glyphs(): IGlyph[] {
         return this._glyphs;
-    }
-
-    private _uuid: string;
-
-    get uuid(): string {
-        return this._uuid;
     }
 
     append(glyph: IGlyph) {
@@ -40,7 +39,7 @@ export default class TextBlock extends Rect implements ITextBlock {
     styleParagraph(index: number, paragraphStyle: IParagraphStyle) {
         const paragraphStart = this.findParagraphStart(index);
         const paragraphEnd = this.findParagraphEnd(index);
-        for(let i = paragraphStart; i <= paragraphEnd; i++)
+        for (let i = paragraphStart; i <= paragraphEnd; i++)
             this._glyphs[i].paragraphStyle = paragraphStyle;
     }
 
@@ -59,6 +58,6 @@ export default class TextBlock extends Rect implements ITextBlock {
         while (index < this._glyphs.length && this._glyphs[index].char !== '\r') {
             index++;
         }
-        return index === this._glyphs.length ? index : index - 1;
+        return index - 1;
     }
 }

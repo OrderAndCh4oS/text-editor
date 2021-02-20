@@ -9,11 +9,11 @@ export default class TableBlock extends Rect implements ITableBlock {
         super();
     }
 
-    get rows(): IRow[] {
-        return this._rows;
-    }
-
     get uuid(): string {
         return this._uuid;
+    }
+
+    get rows(): IRow[] {
+        return this._rows;
     }
 }

@@ -2,25 +2,23 @@ import Rect from "../abstracts/rect";
 import {IImage, IImageBlock} from "../../interface";
 
 export default class ImageBlock extends Rect implements IImageBlock {
+    private _clip: boolean;
+    private _image: IImage;
+    private _uuid: string;
+
     constructor() {
         super();
     }
 
-    private _clip: boolean;
-
-    get clip(): boolean {
-        return this._clip;
+    get uuid(): string {
+        return this._uuid;
     }
-
-    private _image: IImage;
 
     get image(): IImage {
         return this._image;
     }
 
-    private _uuid: string;
-
-    get uuid(): string {
-        return this._uuid;
+    get clip(): boolean {
+        return this._clip;
     }
 }

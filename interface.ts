@@ -95,7 +95,7 @@ export interface IRgb {
 
 export interface IFont {
     family: string
-    style: string
+    weight: number
     size: number
     lineHeight: number
 }
