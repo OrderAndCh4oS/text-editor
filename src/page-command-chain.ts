@@ -1,4 +1,4 @@
-import {ICommand, IPage, IPageCommandChain} from "../interface";
+import {ICommand, IPage, IPageCommandChain} from "./interface";
 import Page from "./page";
 
 export default class PageCommandChain implements IPageCommandChain {

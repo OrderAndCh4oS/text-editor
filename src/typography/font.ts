@@ -1,4 +1,4 @@
-import {IFont} from "../../interface";
+import {IFont} from "../interface";
 
 export default class Font implements IFont {
     private _family: string;

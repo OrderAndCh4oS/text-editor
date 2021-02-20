@@ -1,5 +1,5 @@
 import Rect from "../abstracts/rect";
-import {IRow, ITableBlock} from "../../interface";
+import {IRow, ITableBlock} from "../interface";
 
 export default class TableBlock extends Rect implements ITableBlock {
     private _rows: IRow[];

@@ -1,5 +1,5 @@
 import Rect from "../abstracts/rect";
-import {IImage, IImageBlock} from "../../interface";
+import {IImage, IImageBlock} from "../interface";
 
 export default class ImageBlock extends Rect implements IImageBlock {
     private _clip: boolean;

@@ -1,4 +1,4 @@
-import {ICommand, IPage, ITableBlock} from "../../interface";
+import {ICommand, IPage, ITableBlock} from "../interface";
 
 class AddTableBlockCommand implements ICommand {
     private _tableBlock: ITableBlock;

@@ -1,4 +1,4 @@
-import {IRgb} from "../../interface";
+import {IRgb} from "../interface";
 
 export default class Rgb implements IRgb {
     private _r: number;

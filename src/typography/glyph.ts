@@ -1,4 +1,4 @@
-import {ICharacterStyle, IGlyph, IParagraphStyle} from "../../interface";
+import {ICharacterStyle, IGlyph, IParagraphStyle} from "../interface";
 
 export default class Glyph implements IGlyph {
     private _char: string;

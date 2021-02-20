@@ -1,4 +1,4 @@
-import {ICharacterStyle, IFont, IRgb} from "../../interface";
+import {ICharacterStyle, IFont, IRgb} from "../interface";
 
 export default class CharacterStyle implements ICharacterStyle {
     private _colour: IRgb;

@@ -1,4 +1,4 @@
-import {IPoint, IRect} from "../../interface";
+import {IPoint, IRect} from "../interface";
 
 export default abstract class Rect implements IRect {
     private _position: IPoint;

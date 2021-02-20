@@ -1,4 +1,4 @@
-import {ICommand, IImageBlock, IPage} from "../../interface";
+import {ICommand, IImageBlock, IPage} from "../interface";
 
 class AddImageBlockCommand implements ICommand {
     private _imageBlock: IImageBlock;

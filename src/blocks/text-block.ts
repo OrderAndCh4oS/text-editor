@@ -1,4 +1,4 @@
-import {ICharacterStyle, IGlyph, IParagraphStyle, ITextBlock} from "../../interface";
+import {ICharacterStyle, IGlyph, IParagraphStyle, ITextBlock} from "../interface";
 import Rect from "../abstracts/rect";
 
 export default class TextBlock extends Rect implements ITextBlock {

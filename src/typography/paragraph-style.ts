@@ -1,4 +1,4 @@
-import {IFont, IParagraphStyle, IRgb} from "../../interface";
+import {IFont, IParagraphStyle, IRgb} from "../interface";
 
 export default class ParagraphStyle implements IParagraphStyle {
     private _alignment: "left" | "right" | "centre" | "justified";

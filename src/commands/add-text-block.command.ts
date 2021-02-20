@@ -1,4 +1,4 @@
-import {ICommand, IPage, ITextBlock} from "../../interface";
+import {ICommand, IPage, ITextBlock} from "../interface";
 
 class AddTextBlockCommand implements ICommand {
     private _textBlock: ITextBlock;

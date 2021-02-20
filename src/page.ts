@@ -1,4 +1,4 @@
-import {IImageBlock, IPage, ITableBlock, ITextBlock} from "../interface";
+import {IImageBlock, IPage, ITableBlock, ITextBlock} from "./interface";
 
 export default class Page implements IPage {
     private _content: (ITextBlock | IImageBlock | ITableBlock)[];
