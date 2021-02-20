@@ -4,12 +4,20 @@ export default class ParagraphStyle implements IParagraphStyle {
     private _alignment: "left" | "right" | "centre" | "justified";
     private _colour: IRgb;
     private _font: IFont;
+    private _lineHeight: number;
     private _tracking: number;
 
-    constructor(alignment: "left" | "right" | "centre" | "justified", colour: IRgb, font: IFont, tracking: number) {
+    constructor(
+        alignment: "left" | "right" | "centre" | "justified",
+        colour: IRgb,
+        font: IFont,
+        lineHeight: number,
+        tracking: number
+    ) {
         this._alignment = alignment;
         this._colour = colour;
         this._font = font;
+        this._lineHeight = lineHeight;
         this._tracking = tracking;
     }
 
@@ -35,6 +43,14 @@ export default class ParagraphStyle implements IParagraphStyle {
 
     set tracking(value: number) {
         this._tracking = value;
+    }
+
+    get lineHeight(): number {
+        return this._lineHeight;
+    }
+
+    set lineHeight(value: number) {
+        this._lineHeight = value;
     }
 
     get alignment(): "left" | "right" | "centre" | "justified" {

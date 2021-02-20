@@ -2,13 +2,11 @@ import {IFont} from "../interface";
 
 export default class Font implements IFont {
     private _family: string;
-    private _lineHeight: number;
     private _size: number;
     private _weight: number;
 
-    constructor(family: string, lineHeight: number, size: number, weight: number) {
+    constructor(family: string, size: number, weight: number) {
         this._family = family;
-        this._lineHeight = lineHeight;
         this._size = size;
         this._weight = weight;
     }
@@ -35,13 +33,5 @@ export default class Font implements IFont {
 
     set size(value: number) {
         this._size = value;
-    }
-
-    get lineHeight(): number {
-        return this._lineHeight;
-    }
-
-    set lineHeight(value: number) {
-        this._lineHeight = value;
     }
 }

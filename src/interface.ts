@@ -72,6 +72,7 @@ export interface IParagraphStyle {
     colour: IRgb
     font: IFont
     tracking: number
+    lineHeight: number
     alignment: 'left' | 'right' | 'centre' | 'justified'
 }
 
@@ -97,7 +98,6 @@ export interface IFont {
     family: string
     weight: number
     size: number
-    lineHeight: number
 }
 
 export interface ICommand {
